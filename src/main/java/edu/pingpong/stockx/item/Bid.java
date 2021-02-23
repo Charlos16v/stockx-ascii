@@ -11,10 +11,12 @@ public class Bid implements Offer {
         this.bid = bid;
     }
 
+    @Override
     public String size() {
         return this.size;
     }
 
+    @Override
     public int value() {
         return this.bid;
     }

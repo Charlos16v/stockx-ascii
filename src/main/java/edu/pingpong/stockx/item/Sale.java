@@ -11,10 +11,12 @@ public class Sale implements Offer {
         this.price = price;
     }
 
+    @Override
     public String size() {
         return this.size;
     }
 
+    @Override
     public int value() {
         return this.price;
     }
