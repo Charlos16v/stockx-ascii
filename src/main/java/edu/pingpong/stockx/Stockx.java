@@ -175,7 +175,7 @@ public class Stockx {
 
         System.out.println("\n\t\t SALES 9.5 US");
         Criteria size = new Size("9.5");
-        /*
+
         sales = new Sales();
         Criteria andSizeSales = new AndCriteria(size, sales);
         andSizeSales.checkCriteria(sneaker).forEach(System.out::print);
@@ -189,7 +189,7 @@ public class Stockx {
         /**
          * Reutiliza el filtro AndCriteria
          * para filtrar las bids de la talla 9.5
-
+        */
 
          System.out.println("\n\t\t BIDS 9.5 US");
          bids = new Bids();

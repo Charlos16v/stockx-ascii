@@ -18,11 +18,10 @@ public class MaxBid implements Criteria {
 
         Comparator<Offer> comparator = Comparator.comparing(Offer::value);
 
-        List<Offer> lista = sneaker.offers().stream()
+        return sneaker.offers().stream()
                 .filter(offer -> offer instanceof Bid)
                 .max(comparator)
                 .stream().collect(Collectors.toList());
-        return lista;
 
     }
 }

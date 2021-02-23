@@ -1,4 +1,4 @@
-/*
+
 package edu.pingpong.stockx.criteria;
 
 import edu.pingpong.stockx.item.Item;
@@ -20,8 +20,13 @@ public class AndCriteria implements Criteria {
 
     @Override
     public List<Offer> checkCriteria(Item sneaker) {
-        List<Offer> primerCriteria = this.criteria.checkCriteria(sneaker).stream().collect(Collectors.toList());
-        return this.otherCriteria.checkCriteria(primerCriteria);
+        List<Offer> criteria = this.criteria.checkCriteria(sneaker);
+
+        List<Offer> otherCriteria = this.otherCriteria.checkCriteria(sneaker);
+
+        return criteria.stream()
+                .distinct()
+                .filter(otherCriteria::contains)
+                .collect(Collectors.toList());
     }
 }
-*/
