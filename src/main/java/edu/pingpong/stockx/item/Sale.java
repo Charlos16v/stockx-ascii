@@ -22,14 +22,13 @@ public class Sale implements Offer {
     }
 
     @Override
-    public int compareTo(Offer offer) {
-        return this.price.compareTo(offer.value());
+    public int compareTo(Offer sale) {
+        return this.price.compareTo(sale.value());
     }
 
     @Override
     public String toString() {
-        return "Size: " + size() + '\n' +
-                "Price: " + value() + '\n' + '\n';
+        return "\t\t" + this.size() + "\t" + this.value() +"\n";
     }
 
 }

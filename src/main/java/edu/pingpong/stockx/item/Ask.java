@@ -22,13 +22,12 @@ public class Ask implements Offer {
     }
 
     @Override
-    public int compareTo(Offer offer) {
-        return this.ask.compareTo(offer.value());
+    public int compareTo(Offer ask) {
+        return this.ask.compareTo(ask.value());
     }
 
     @Override
     public String toString() {
-        return "Size: " + size() + '\n' +
-                "Ask: " + value() + '\n' + '\n';
+        return "\t\t" + this.size() + "\t" + this.value() +"\n";
     }
 }
