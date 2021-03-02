@@ -23,6 +23,7 @@ public class AndCriteriaTest {
 
         sneaker.add(new Sale("6", 200));
         sneaker.add(new Sale("9.5", 888));
+        sneaker.add(new Sale("9.5", 777));
         sneaker.add(new Sale("10", 69));
     }
 
@@ -30,5 +31,8 @@ public class AndCriteriaTest {
     public void checkCriteriaTest() {
         assertEquals(888, andCriteria.checkCriteria(sneaker).get(0).value());
         assertEquals("9.5", andCriteria.checkCriteria(sneaker).get(0).size());
+
+        assertEquals(777, andCriteria.checkCriteria(sneaker).get(1).value());
+        assertEquals("9.5", andCriteria.checkCriteria(sneaker).get(1).size());
     }
 }
