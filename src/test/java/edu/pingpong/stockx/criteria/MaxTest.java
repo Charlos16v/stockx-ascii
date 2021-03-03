@@ -30,16 +30,12 @@ public class MaxTest {
         sneaker.add(new Bid("6", 200));
         sneaker.add(new Bid("9.5", 888));
         sneaker.add(new Bid("10", 69));
-        sneaker.add(new Bid("9.5", 888));
-        sneaker.add(new Bid("9.5", 888));
     }
 
     @Test
     public void checkCriteriaTest() {
-        List<Offer> lista = this.max.checkCriteria(sneaker);
-        System.out.println(lista);
-        //assertEquals(888, max.checkCriteria(sneaker).get(0).value());
-        //assertEquals("9.5", max.checkCriteria(sneaker).get(0).size());
+        assertEquals(888, max.checkCriteria(sneaker).get(0).value());
+        assertEquals("9.5", max.checkCriteria(sneaker).get(0).size());
     }
     @Test
     public void checkCriteria_max_size_bid_Test() {
