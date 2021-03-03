@@ -200,7 +200,7 @@ public class Stockx {
          * Crea un filtro Max(size, bids)
          * que devuelva el maximo de las bids
          * de una talla.
-
+        */
 
          Criteria sizeMaxBid = new Max(size, bids);
          List<Offer> sizeBid = sizeMaxBid.checkCriteria(sneaker);
@@ -211,7 +211,7 @@ public class Stockx {
          * Crea un filtro Min(size, asks)
          * que devuelva el minimo de las asks
          * de una talla.
-
+        */
 
          Criteria sizeMinAsk = new Min(size, asks);
          List<Offer> sizeAsk = sizeMinAsk.checkCriteria(sneaker);
